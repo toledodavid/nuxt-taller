@@ -1,0 +1,23 @@
+<template lang="html">
+    <div class="box column is-one-quarter">
+        <div class="card">
+            <h3>{{album.title}}</h3>
+            <nuxt-link :to="`/albums/${album.id}`" class="button is-primary">Ver album</nuxt-link>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'AlbumCard',
+    props: {
+        album: Object
+    }
+}
+</script>
+
+<style scoped>
+   h3 {
+       min-height: 4.5em;
+   }
+</style>
